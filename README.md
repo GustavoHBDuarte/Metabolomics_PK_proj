@@ -1,6 +1,6 @@
 # Rosuvastatin Absorption Estimator - Predicting AUC and Cmax: Project Overview
 
-Rosuvastatin is a quite known lipid-lowering agent generally used for hypercholesterolemia treatment and coronary artery diseases prevention. There is a substantial inter-individual variability in the absorption of statins, which in turn may affect drug therapy safety and efficacy. Therefore, the ability of predicting the individual absorption of Rosuvastin before even taking the drug would be tremendously valuable for optimal drug therapy, minimizing adverse effects.This project basically aims to:
+Rosuvastatin is a quite known lipid-lowering agent generally used for hypercholesterolemia treatment and coronary artery diseases prevention. There is a substantial inter-individual variability in the absorption of statins, which in turn may affect drug therapy safety and efficacy. Therefore, the ability of predicting the individual absorption of Rosuvastin before even taking the drug would be tremendously valuable for optimal drug therapy, minimizing adverse effects and reducing costs associated with unefective drug therapy.This project basically aims to:
 
 * Develop an algorithm to predict interindividual rosuvastatin absorption by predicting the main pharmacokinetic parameters AUC and C<sub>max</sub>.
  
@@ -20,6 +20,8 @@ Rosuvastatin is a quite known lipid-lowering agent generally used for hyperchole
 ## Datasets
 
 * The datasets used for this project refers to a Liquid Chromatograpy Mass Spectrometry (LC-MS) metabolite profiling experiment in predose human serum specimens, where raw acquisition files will be available on: www.ebi.ac.uk/metabolights/MTBLS3128.
+
+* In this experiment AUC values ranged from 73.59 to 483.40 ng h/mL whereas C<sub>max</sub> ranged from 6.63 to 54.12 ng/mL.
 
 * From .raw instrument experiment files, data were processed using *ProgenesisQI* software generating a .csv file with aligned LC-MS molecular features as well as other experiment-related information. Each molecular feature corresponds to a chemical compound detected in the above mentioned experiment and will be used as atributtes/features for machine learning modeling.
 
@@ -61,11 +63,17 @@ Some important considerations about the achieved results:
 * Integrating both molecular features and lab exams results simultaneously does not improve significantly models performance.  
 
 * AUC predictions metrics (positive mode):
-  * R<sup>2</sup>: 
-  * RMSE:
-  * MAPE:
+  * R<sup>2</sup>: 0.93
+  * RMSE: 19.03 ng h/mL
+  * MAPE: 10.12 %
 
-
+* C<sub>max</sub> predictions metrics (positive mode):
+  * R<sup>2</sup>: 0.94
+  * RMSE: 2.54 ng/mL
+  * MAPE: 11.56 %
 
 ## Conclusions
 
+* Application of elastic net regression achieved satisfactory results;
+* Promisssing application of rosuvastatin absorption prediction using predose serum samples;
+* Implementation of the workflow herein described represents a step forward towards personalized drug therapy;
