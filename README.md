@@ -2,7 +2,7 @@
 
 Rosuvastatin is a quite known lipid-lowering agent generally used for hypercholesterolemia treatment and coronary artery diseases prevention. There is a substantial inter-individual variability in the absorption of statins, which in turn may affect drug therapy safety and efficacy. Therefore, the ability of predicting the individual absorption of Rosuvastin before even taking the drug would be tremendously valuable for optimal drug therapy, minimizing adverse effects.This project basically aims to:
 
-* Develop an algorithm to predict interindividual rosuvastatin absorption by predicting the main pharmacokinetic parameters AUC and Cmax.
+* Develop an algorithm to predict interindividual rosuvastatin absorption by predicting the main pharmacokinetic parameters AUC and C<sub>max</sub>.
  
 * Optimize Elastic Net regression applying feature selection and GridSearchCV hyperparameters tuning.
 
@@ -18,13 +18,13 @@ Rosuvastatin is a quite known lipid-lowering agent generally used for hyperchole
 
 ## Datasets
 
-* The datasets used for this project refers to a Liquid Chromatograpy Mass Spectrometry (LC-MS) metabolite profiling experiment in human serum specimens, where raw acquisition files will be available on: www.ebi.ac.uk/metabolights/MTBLS3128.
+* The datasets used for this project refers to a Liquid Chromatograpy Mass Spectrometry (LC-MS) metabolite profiling experiment in predose human serum specimens, where raw acquisition files will be available on: www.ebi.ac.uk/metabolights/MTBLS3128.
 
 * From .raw instrument experiment files, data were processed using *ProgenesisQI* software generating a .csv file with aligned LC-MS molecular features as well as other experiment-related information. Each molecular feature corresponds to a chemical compound detected in the above mentioned experiment and will be used as atributtes/features for machine learning modeling.
 
 * In order to clean the above mentioned .csv file, first data was normalized by the internal standard feature. Then, features with relative standard deviation higher than 25% in quality control samples (samples analized during data acquisition to monitor LC-MS variation over the time course) were removed. This step was performed outside Python environment, using MS Excel.
 
-* Several datasets were generated corresponding to different types of LC-MS analysis (positive and negative modes). Additionally, a dataset containing lab exams results for the enrolled subjects were also included in the analysis in order to compare its performance when using it as attributes/features to predict both AUC and Cmax with the performance of the model using molecular features as attributes. An integrated model using both molecular features and lab exam results as attributes was also evaluated.
+* Several datasets were generated corresponding to different types of LC-MS analysis (positive and negative modes). Additionally, a dataset containing lab exams results for the enrolled subjects were also included in the analysis in order to compare its performance when using it as attributes/features to predict both AUC and C<sub>max</sub> with the performance of the model using molecular features as attributes. An integrated model using both molecular features and lab exam results as attributes was also evaluated.
 
 * Evaluated datasets are available in the attached notebook as url link.
 
@@ -50,14 +50,20 @@ For data preparation, basic data inspection/visualization, machine learning mode
 ## Main results
 
 Model results were mainly evaluated in terms of explained variance R2, root mean square error RMSE and mean absolute percentage error MAPE. The distribution of residuals were also visualized. Due to reduced number of available observations (n=40), the built models were cross-validated by Leave-One-Out approach.
-Some important considerations about the achieved results
+Some important considerations about the achieved results:
 
 * Positive mode analysis models overperformed negative mode models for both AUC and Cmax predictions.
 
-* 
+* A better models performance was achieved when using molecular features as attributes over lab exams results models.
+
+* Integrating both molecular features and lab exams results simultaneously does not improve significantly models performance.  
+
+* AUC predictions metrics (positive mode):
+  * R<sup>2</sup>: 
+  * RMSE:
+  * MAPE:
 
 
 
-
-
+## Conclusions
 
