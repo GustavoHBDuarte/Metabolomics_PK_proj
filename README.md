@@ -20,13 +20,13 @@ Rosuvastatin is a quite known lipid-lowering agent generally used for hyperchole
 
 * The datasets used for this project refers to a Liquid Chromatograpy Mass Spectrometry (LC-MS) metabolite profiling experiment in human serum specimens, where raw acquisition files will be available on: www.ebi.ac.uk/metabolights/MTBLS3128.
 
-* From .raw files data were processed using *ProgenesisQI* software generating a .csv file with aligned LC-MS molecular features as well as other experiment-related information. Each molecular feature corresponds to a chemical compound detected in the above mentioned experiment and will be used as atributtes/features for machine learning modeling.
+* From .raw instrument experiment files, data were processed using *ProgenesisQI* software generating a .csv file with aligned LC-MS molecular features as well as other experiment-related information. Each molecular feature corresponds to a chemical compound detected in the above mentioned experiment and will be used as atributtes/features for machine learning modeling.
 
 * In order to clean the above mentioned .csv file, first data was normalized by the internal standard feature. Then, features with relative standard deviation higher than 25% were removed. This step was performed outside Python environment, using MS Excel.
 
-* Several datasets were generated corresponding to different types of LC-MS analysis (positive and negative modes)
+* Several datasets were generated corresponding to different types of LC-MS analysis (positive and negative modes). Additionally, a dataset containing lab exams results for the enrolled subjects were also included in the analysis in order to compare its performance when using it as attributes/features to predict both AUC and Cmax with the performance of the model using molecular features as attributes. An integrated model using both molecular features and lab exam results as attributes was also evaluated.
 
-* Resulting datasets are available in the attached notebook.
+* Evaluated datasets are available in the attached notebook as url link.
 
 
 
@@ -36,7 +36,7 @@ Since the previous cleaned datased is pratically a semi-curated dataset, minor d
 
 The overall data analysis pipeline applied was:
 
-1. Data preparation for elastic net regression
+1. Data preparation for elastic net regression (data scaling)
 2. Basic data inspection (checking number of missing values, correlation analysis, box plot of features before and after scaling, and histogram of scaled features)
 3. Machine learning modeling (application of elastic net regressor)
 4. Feature selection to improving the model (removal of features with zero coefficients)
@@ -49,5 +49,6 @@ For data preparation, basic data inspection/visualization, machine learning mode
 
 
 
-![alt text](https://github.com/GustavoHBDuarte/Metabolomics_PK_proj/blob/main/boxplot_before_scaling.png "Feature distribution before scaling")
+![alt text](https://github.com/GustavoHBDuarte/Metabolomics_PK_proj/blob/main/fig/boxplot_before_scaling.png "Feature distribution before scaling")
+![alt text](https://github.com/GustavoHBDuarte/Metabolomics_PK_proj/blob/main/fig/boxplot_after_scaling.png "Feature distribution after scaling")
 
