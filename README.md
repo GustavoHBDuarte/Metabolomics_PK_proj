@@ -65,12 +65,12 @@ Some important considerations about the achieved results:
 * AUC predictions metrics (positive mode):
   * R<sup>2</sup>: 0.93
   * RMSE: 19.03 ng h/mL
-  * MAPE: 10.12 %
+  * MAPE: 10.12%
 
 * C<sub>max</sub> predictions metrics (positive mode):
   * R<sup>2</sup>: 0.94
   * RMSE: 2.54 ng/mL
-  * MAPE: 11.56 %
+  * MAPE: 11.56%
 
 ## Conclusions
 
