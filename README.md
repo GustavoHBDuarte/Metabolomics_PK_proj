@@ -16,6 +16,7 @@ Rosuvastatin is a quite known lipid-lowering agent generally used for hyperchole
 **Packages**: pandas, numpy, sklearn, scipy, matplotlib, plotly
 
 
+
 ## Datasets
 
 * The datasets used for this project refers to a Liquid Chromatograpy Mass Spectrometry (LC-MS) metabolite profiling experiment in predose human serum specimens, where raw acquisition files will be available on: www.ebi.ac.uk/metabolights/MTBLS3128.
@@ -47,9 +48,10 @@ The overall data analysis pipeline applied was:
 For data preparation, basic data inspection/visualization, machine learning modeling and feature selection steps, functions were definied to ease each step.
 
 
+
 ## Main results
 
-Model results were mainly evaluated in terms of explained variance R2, root mean square error RMSE and mean absolute percentage error MAPE. The distribution of residuals were also visualized. Due to reduced number of available observations (n=40), the built models were cross-validated by Leave-One-Out approach.
+Model results were mainly evaluated in terms of explained variance R<sup>2</sup>, root mean square error RMSE and mean absolute percentage error MAPE. The distribution of residuals were also visualized. Due to reduced number of available observations (n=40), the built models were cross-validated by Leave-One-Out approach.
 Some important considerations about the achieved results:
 
 * Positive mode analysis models overperformed negative mode models for both AUC and Cmax predictions.
