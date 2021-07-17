@@ -16,15 +16,18 @@ Rosuvastatin is a quite known lipid-lowering agent generally used for hyperchole
 **Packages**: pandas, numpy, sklearn, scipy, matplotlib, plotly
 
 
-## Dataset
+## Datasets
 
-* The dataset used for this project refers to a Liquid Chromatograpy Mass Spectrometry metabolite profiling experiment, where raw acquisition files will be available on: www.ebi.ac.uk/metabolights/MTBLS3128.
+* The datasets used for this project refers to a Liquid Chromatograpy Mass Spectrometry (LC-MS) metabolite profiling experiment in human serum specimens, where raw acquisition files will be available on: www.ebi.ac.uk/metabolights/MTBLS3128.
 
-* From .raw files data were processed using *ProgenesisQI* software generating a .csv file with aligned LC-MS molecular features as well as other experiment-related information.
+* From .raw files data were processed using *ProgenesisQI* software generating a .csv file with aligned LC-MS molecular features as well as other experiment-related information. Each molecular feature corresponds to a chemical compound detected in the above mentioned experiment and will be used as atributtes/features for machine learning modeling.
 
 * In order to clean the above mentioned .csv file, first data was normalized by the internal standard feature. Then, features with relative standard deviation higher than 25% were removed. This step was performed outside Python environment, using MS Excel.
 
-* Resulting dataset is available in the attached notebook
+* Several datasets were generated corresponding to different types of LC-MS analysis (positive and negative modes)
+
+* Resulting datasets are available in the attached notebook.
+
 
 
 ## Data Preparation for Machine Learning, Basic Data Visualization And Machine Learning Modeling
@@ -44,6 +47,7 @@ The overall data analysis pipeline applied was:
 
 For data preparation, basic data inspection/visualization, machine learning modeling and feature selection steps, functions were definied to ease each step.
 
-Data visualization 
 
+
+![alt text](https://github.com/GustavoHBDuarte/Metabolomics_PK_proj/blob/main/boxplot_before_scaling.png "Feature distribution before scaling")
 
