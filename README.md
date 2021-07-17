@@ -32,20 +32,32 @@ Rosuvastatin is a quite known lipid-lowering agent generally used for hyperchole
 
 ## Data Preparation for Machine Learning, Basic Data Visualization And Machine Learning Modeling
 
-Since the previous cleaned datased is pratically a semi-curated dataset, minor data preparation and visualization were performed before runing elastic net regressor.
+Since the previous cleaned dataset is pratically a semi-curated dataset, minor data preparation and visualization were performed before runing elastic net regressor.
 
 The overall data analysis pipeline applied was:
 
-1. Data preparation for elastic net regression (data scaling)
+1. Data preparation for elastic net regression (dummy variable transformation, when necessary, and data scaling)
 2. Basic data inspection (checking number of missing values, correlation analysis, box plot of features before and after scaling, and histogram of scaled features)
 3. Machine learning modeling (application of elastic net regressor)
 4. Feature selection to improving the model (removal of features with zero coefficients)
 5. Machine learning modeling (evaluating the effect  of feature reduction)
-6. Fine feature reduction and hyperparameters tuning
+6. Fine feature reduction (optimized feature subset selection and hyperparameters tuning)
 7. Machine learning modeling
 
-
 For data preparation, basic data inspection/visualization, machine learning modeling and feature selection steps, functions were definied to ease each step.
+
+
+## Main results
+
+Model results were mainly evaluated in terms of explained variance R2, root mean square error RMSE and mean absolute percentage error MAPE. The distribution of residuals were also visualized. Due to reduced number of available observations (n=40), the built models were cross-validated by Leave-One-Out approach.
+Some important considerations about the achieved results
+
+* Positive mode analysis models overperformed negative mode models for both AUC and Cmax predictions.
+
+* 
+
+
+
 
 
 
