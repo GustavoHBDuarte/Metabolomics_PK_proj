@@ -75,5 +75,5 @@ Some important considerations about the achieved results:
 ## Conclusions
 
 * Application of elastic net regression achieved satisfactory results;
-* Promisssing application of rosuvastatin absorption prediction using predose serum samples;
+* Promising application of rosuvastatin absorption prediction using predose serum samples;
 * Implementation of the workflow herein described represents a step forward towards personalized drug therapy;
