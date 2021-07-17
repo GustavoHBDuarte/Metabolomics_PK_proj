@@ -1,4 +1,4 @@
-# Rosuvastatin Absorption Estimator - Predicting AUC and Cmax: Project Overview
+# Rosuvastatin Absorption Estimator - Predicting AUC and C<sub>max</sub>: Project Overview
 
 Rosuvastatin is a quite known lipid-lowering agent generally used for hypercholesterolemia treatment and coronary artery diseases prevention. There is a substantial inter-individual variability in the absorption of statins, which in turn may affect drug therapy safety and efficacy. Therefore, the ability of predicting the individual absorption of Rosuvastin before even taking the drug would be tremendously valuable for optimal drug therapy, minimizing adverse effects and reducing costs associated with unefective drug therapy.This project basically aims to:
 
@@ -41,7 +41,7 @@ The overall data analysis pipeline applied was:
 
 1. Data preparation for elastic net regression (dummy variable transformation, when necessary, and data scaling)
 2. Basic data inspection (checking number of missing values, correlation analysis, box plot of features before and after scaling, and histogram of scaled features)
-3. Machine learning modeling (application of elastic net regressor to predict both AUC and Cmax for each observation)
+3. Machine learning modeling (application of elastic net regressor to predict both AUC and C<sub>max</sub> for each observation)
 4. Feature selection to improving the model (removal of features with zero coefficients)
 5. Machine learning modeling (evaluating the effect  of feature reduction)
 6. Fine feature reduction (optimized feature subset selection and hyperparameters tuning)
@@ -56,7 +56,7 @@ For data preparation, basic data inspection/visualization, machine learning mode
 Model results were mainly evaluated in terms of explained variance R<sup>2</sup>, root mean square error RMSE and mean absolute percentage error MAPE. The distribution of residuals were also visualized. Due to reduced number of available observations (n=40), the built models were cross-validated by Leave-One-Out approach.
 Some important considerations about the achieved results:
 
-* Positive mode analysis models overperformed negative mode models for both AUC and Cmax predictions.
+* Positive mode analysis models overperformed negative mode models for both AUC and C<sub>max</sub> predictions.
 
 * A better models performance was achieved when using molecular features as attributes over lab exams results models.
 
