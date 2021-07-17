@@ -38,7 +38,7 @@ The overall data analysis pipeline applied was:
 
 1. Data preparation for elastic net regression (dummy variable transformation, when necessary, and data scaling)
 2. Basic data inspection (checking number of missing values, correlation analysis, box plot of features before and after scaling, and histogram of scaled features)
-3. Machine learning modeling (application of elastic net regressor)
+3. Machine learning modeling (application of elastic net regressor to predict both AUC and Cmax for each observation)
 4. Feature selection to improving the model (removal of features with zero coefficients)
 5. Machine learning modeling (evaluating the effect  of feature reduction)
 6. Fine feature reduction (optimized feature subset selection and hyperparameters tuning)
