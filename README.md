@@ -29,4 +29,8 @@ Rosuvastatin is a quite known lipid-lowering agent generally used for hyperchole
 
 ## Data Preparation for Machine Learning, Basic Data Visualization And Machine Learning Modeling
 
-Since the previous cleaned datased is pratically a semi-curated dataset, minor data preparation and visualization were performed before runing elastic net estimation
+Since the previous cleaned datased is pratically a semi-curated dataset, minor data preparation and visualization were performed before runing elastic net estimation.
+
+For data preparation, basic data inspection/visualization, machine learning modeling and feature selection steps, functions were definied to ease each step.
+
+
