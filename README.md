@@ -49,6 +49,3 @@ For data preparation, basic data inspection/visualization, machine learning mode
 
 
 
-![alt text](https://github.com/GustavoHBDuarte/Metabolomics_PK_proj/blob/main/fig/boxplot_before_scaling.png "Feature distribution before scaling")
-![alt text](https://github.com/GustavoHBDuarte/Metabolomics_PK_proj/blob/main/fig/boxplot_after_scaling.png "Feature distribution after scaling")
-
