@@ -2,7 +2,7 @@
 
 Rosuvastatin is a quite known lipid-lowering agent generally used for hypercholesterolemia treatment and coronary artery diseases prevention. There is a substantial inter-individual variability in the absorption of statins, which in turn may affect drug therapy safety and efficacy. Therefore, the ability of predicting the individual absorption of Rosuvastin before even taking the drug would be tremendously valuable for optimal drug therapy and minimizing adverse effects.This project basically aims to:
 
-* Use information provided by Liquid Chromatography-Mass Spectrometry metabolite profiling in predose human serum samples to predictic interindividual 
+* Use information provided by Liquid Chromatography-Mass Spectrometry metabolite profiling in predose human serum samples to predict interindividual 
 
 ---
 ## Code and Resources Used
